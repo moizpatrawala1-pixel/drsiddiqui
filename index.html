@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Best General Physician in Vashi | Dr. Siddiqui</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --teal: #1A7A6E;
+  --teal-dark: #145F56;
+  --teal-light: #2A9D8F;
+  --teal-pale: #E8F5F3;
+  --teal-mist: #F0FAF9;
+  --orange: #E76F3B;
+  --orange-light: #F4A07A;
+  --orange-pale: #FEF3EE;
+  --navy: #0D2137;
+  --navy-mid: #1A3650;
+  --text: #1C2B3A;
+  --text-mid: #4A6070;
+  --text-light: #7A90A0;
+  --border: rgba(26,122,110,0.12);
+  --white: #FFFFFF;
+  --off-white: #F8FDFC;
+  --cream: #FDFAF7;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Nunito Sans', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--text); background: var(--white); overflow-x: hidden; line-height: 1.65; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ── LOADER ── */
+#loader {
+  position: fixed; inset: 0; background: var(--white); z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 16px;
+  transition: opacity 0.5s ease;
+}
+.loader-cross {
+  width: 56px; height: 56px; background: var(--teal); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.loader-cross svg { width: 28px; height: 28px; fill: none; stroke: white; stroke-width: 2.5; }
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.1);opacity:.8} }
+.loader-text { font-family: var(--serif); font-size: 18px; color: var(--teal); font-weight: 600; letter-spacing: 0.02em; }
+
+/* ── NAV ── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  background: var(--white); border-bottom: 1px solid var(--border);
+  padding: 0 20px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(26,122,110,0.08); }
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo-icon {
+  width: 40px; height: 40px; background: var(--teal); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-icon svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 2.2; }
+.nav-logo-text { display: flex; flex-direction: column; }
+.nav-logo-name { font-family: var(--serif); font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1; }
+.nav-logo-sub { font-size: 10px; color: var(--teal); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-phone {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: var(--teal);
+}
+.nav-phone svg { width: 14px; height: 14px; flex-shrink: 0; }
+.nav-book {
+  background: var(--teal); color: white; font-family: var(--sans);
+  font-size: 12px; font-weight: 600; padding: 9px 16px; border-radius: 50px;
+  letter-spacing: 0.03em; white-space: nowrap; transition: background 0.2s;
+}
+.nav-book:hover { background: var(--teal-dark); }
+
+/* hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s; }
+.mobile-menu {
+  display: none; position: fixed; top: 64px; left: 0; right: 0;
+  background: var(--white); border-bottom: 1px solid var(--border);
+  padding: 16px 20px; z-index: 499;
+  flex-direction: column; gap: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.mobile-menu a { font-size: 14px; font-weight: 500; color: var(--text); padding: 10px 0; border-bottom: 1px solid var(--border); }
+.mobile-menu a:last-child { border: none; }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 64px; min-height: calc(100svh - 64px);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #1A4A3A 100%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 24px 40px; position: relative; overflow: hidden;
+}
+.hero-bg-pattern {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.hero-bg-circle-1 {
+  position: absolute; top: -80px; right: -80px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: rgba(26,122,110,0.15); pointer-events: none;
+}
+.hero-bg-circle-2 {
+  position: absolute; bottom: -100px; left: -60px;
+  width: 240px; height: 240px; border-radius: 50%;
+  background: rgba(231,111,59,0.1); pointer-events: none;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(26,122,110,0.25); border: 1px solid rgba(42,157,143,0.35);
+  color: rgba(255,255,255,0.85); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 7px 14px; border-radius: 50px; width: fit-content; margin-bottom: 24px;
+  animation: fadeUp 0.7s ease both;
+}
+.hero-tag-dot { width: 6px; height: 6px; background: #4ECDC4; border-radius: 50%; animation: pulse 2s infinite; }
+.hero h1 {
+  font-family: var(--serif); font-size: clamp(38px, 10vw, 58px);
+  font-weight: 700; color: white; line-height: 1.1; margin-bottom: 8px;
+  animation: fadeUp 0.7s ease 0.1s both;
+}
+.hero h1 em { color: #4ECDC4; font-style: italic; }
+.hero-location {
+  font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 400;
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px;
+  animation: fadeUp 0.7s ease 0.2s both;
+}
+.hero-desc {
+  font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.8; font-weight: 300;
+  max-width: 360px; margin-bottom: 36px;
+  animation: fadeUp 0.7s ease 0.3s both;
+}
+.hero-btns { display: flex; flex-direction: column; gap: 12px; animation: fadeUp 0.7s ease 0.4s both; }
+.btn-teal {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--teal-light); color: white; font-family: var(--sans);
+  font-size: 14px; font-weight: 600; padding: 15px 28px;
+  border-radius: 50px; border: none; cursor: pointer; transition: all 0.25s;
+}
+.btn-teal:hover { background: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(42,157,143,0.35); }
+.btn-outline-white {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: transparent; color: rgba(255,255,255,0.75);
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  padding: 15px 28px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.25s;
+}
+.btn-outline-white:hover { border-color: rgba(255,255,255,0.4); color: white; }
+.hero-call-box {
+  margin-top: 36px; display: flex; align-items: center; gap: 14px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px; padding: 16px 20px;
+  animation: fadeUp 0.7s ease 0.55s both;
+}
+.hero-call-icon {
+  width: 42px; height: 42px; background: var(--teal-light); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.hero-call-icon svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 2.2; }
+.hero-call-label { font-size: 10px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
+.hero-call-num { font-family: var(--serif); font-size: 20px; font-weight: 600; color: white; }
+.hero-images {
+  display: none;
+}
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── SECTION COMMONS ── */
+.sec { padding: 60px 24px; }
+.sec-label { font-size: 11px; font-weight: 700; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+.sec-title { font-family: var(--serif); font-size: clamp(28px, 7vw, 38px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px; }
+.sec-title em { font-style: italic; color: var(--teal); }
+.sec-body { font-size: 14.5px; color: var(--text-mid); line-height: 1.85; font-weight: 400; }
+.sec-divider { width: 48px; height: 3px; background: var(--teal); border-radius: 2px; margin: 14px 0 20px; }
+
+/* ── ABOUT ── */
+.about { background: var(--off-white); }
+.about-img-wrap {
+  position: relative; margin-bottom: 36px;
+}
+.about-img-main {
+  width: 100%; height: 260px; background: linear-gradient(135deg, var(--teal-pale), var(--teal-mist));
+  border-radius: 20px; overflow: hidden; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.about-img-placeholder {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.about-img-placeholder-icon {
+  width: 72px; height: 72px; background: var(--teal); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.about-img-placeholder-icon svg { width: 36px; height: 36px; fill: none; stroke: white; stroke-width: 1.8; }
+.about-img-placeholder-text { font-family: var(--serif); font-size: 15px; color: var(--teal-dark); font-weight: 600; }
+.about-exp-badge {
+  position: absolute; bottom: -16px; right: 20px;
+  background: var(--orange); color: white; border-radius: 14px;
+  padding: 12px 18px; text-align: center;
+  box-shadow: 0 4px 16px rgba(231,111,59,0.35);
+}
+.about-exp-num { font-family: var(--serif); font-size: 30px; font-weight: 700; line-height: 1; }
+.about-exp-label { font-size: 11px; font-weight: 600; opacity: 0.85; margin-top: 2px; }
+.about-content { padding-top: 28px; }
+.about-highlights { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+.about-highlight {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: white; border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
+}
+.hl-icon {
+  width: 36px; height: 36px; background: var(--teal-pale); border-radius: 9px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.hl-text h4 { font-size: 13.5px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.hl-text p { font-size: 12.5px; color: var(--text-light); line-height: 1.5; }
+.btn-teal-outline {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 24px;
+  background: transparent; color: var(--teal); border: 1.5px solid var(--teal);
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  padding: 12px 22px; border-radius: 50px; transition: all 0.2s; cursor: pointer;
+}
+.btn-teal-outline:hover { background: var(--teal); color: white; }
+
+/* ── SERVICES ── */
+.services { background: var(--white); }
+.services-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+.service-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 16px;
+  padding: 20px; display: flex; align-items: center; gap: 16px;
+  transition: all 0.25s; cursor: pointer;
+}
+.service-card:hover { border-color: var(--teal); transform: translateX(4px); box-shadow: 0 4px 20px rgba(26,122,110,0.1); }
+.svc-icon {
+  width: 52px; height: 52px; background: var(--teal-pale); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;
+}
+.svc-body { flex: 1; }
+.svc-body h3 { font-size: 14.5px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.svc-body p { font-size: 12.5px; color: var(--text-light); line-height: 1.55; }
+.svc-arrow { color: var(--teal); font-size: 20px; opacity: 0.5; flex-shrink: 0; transition: all 0.2s; }
+.service-card:hover .svc-arrow { opacity: 1; transform: translateX(3px); }
+.view-all-wrap { text-align: center; margin-top: 24px; }
+.btn-teal-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--teal-pale); color: var(--teal); font-family: var(--sans);
+  font-size: 13px; font-weight: 600; padding: 12px 24px; border-radius: 50px;
+  border: 1px solid rgba(26,122,110,0.2); transition: all 0.2s;
+}
+.btn-teal-ghost:hover { background: var(--teal); color: white; }
+
+/* ── ACHIEVEMENTS ── */
+.achievements { background: var(--navy); color: white; }
+.achievements .sec-title { color: white; }
+.achievements .sec-body { color: rgba(255,255,255,0.55); }
+.achievements .sec-divider { background: var(--teal-light); }
+.achievements .sec-label { color: rgba(255,255,255,0.5); }
+.video-wrap {
+  margin-top: 32px; border-radius: 16px; overflow: hidden;
+  position: relative; padding-top: 56.25%; background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.video-wrap iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border: none; border-radius: 16px;
+}
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+.stat-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 20px 16px; text-align: center;
+  transition: background 0.2s;
+}
+.stat-card:hover { background: rgba(42,157,143,0.15); }
+.stat-num { font-family: var(--serif); font-size: 32px; font-weight: 700; color: var(--teal-light); line-height: 1; }
+.stat-plus { color: var(--orange-light); }
+.stat-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 6px; }
+
+/* ── ADVANTAGES ── */
+.advantages { background: var(--teal-mist); }
+.adv-grid { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+.adv-card {
+  background: white; border: 1px solid var(--border); border-radius: 16px;
+  padding: 22px 20px; position: relative; overflow: hidden;
+  transition: all 0.25s;
+}
+.adv-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,122,110,0.1); }
+.adv-num {
+  position: absolute; top: 16px; right: 18px;
+  font-family: var(--serif); font-size: 40px; font-weight: 700;
+  color: rgba(26,122,110,0.07); line-height: 1;
+}
+.adv-icon { font-size: 28px; margin-bottom: 12px; }
+.adv-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.adv-card p { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+
+/* ── DOCTORS ── */
+.doctors { background: var(--white); }
+.doctors-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+.doctor-card {
+  background: var(--off-white); border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden; transition: all 0.25s;
+}
+.doctor-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,122,110,0.1); }
+.doctor-photo {
+  height: 220px; background: linear-gradient(135deg, var(--teal-pale), #C8EDE9);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.doctor-initials-circle {
+  width: 96px; height: 96px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 34px; font-weight: 700; color: white;
+  box-shadow: 0 8px 24px rgba(26,122,110,0.3);
+}
+.doctor-badge {
+  position: absolute; top: 16px; right: 16px;
+  background: var(--teal); color: white; font-size: 11px; font-weight: 600;
+  padding: 5px 12px; border-radius: 50px; letter-spacing: 0.04em;
+}
+.doctor-info { padding: 20px; }
+.doctor-info h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.doctor-quals { font-size: 12px; font-weight: 600; color: var(--teal); letter-spacing: 0.04em; margin-bottom: 8px; text-transform: uppercase; }
+.doctor-spec { font-size: 13px; color: var(--text-mid); margin-bottom: 16px; }
+.doctor-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.doctor-tag {
+  background: var(--teal-pale); color: var(--teal-dark);
+  font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 50px;
+}
+
+/* ── BOOK ── */
+.booking { background: var(--navy); }
+.booking .sec-title { color: white; }
+.booking .sec-body { color: rgba(255,255,255,0.55); }
+.booking .sec-label { color: rgba(255,255,255,0.5); }
+.booking .sec-divider { background: var(--teal-light); }
+.booking-cta-box {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(42,157,143,0.25);
+  border-radius: 20px; padding: 28px 20px; margin-top: 28px;
+}
+.booking-form { display: flex; flex-direction: column; gap: 14px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.form-field input, .form-field select, .form-field textarea {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(42,157,143,0.2);
+  border-radius: 12px; padding: 13px 16px; color: white;
+  font-family: var(--sans); font-size: 14px; outline: none; transition: border 0.2s;
+  -webkit-appearance: none;
+}
+.form-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(42,157,143,0.6)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer; }
+.form-field select option { background: #1A3650; }
+.form-field textarea { min-height: 80px; resize: vertical; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: rgba(42,157,143,0.55); background: rgba(255,255,255,0.1); }
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.2); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-submit {
+  width: 100%; background: var(--teal-light); color: white;
+  font-family: var(--sans); font-size: 14px; font-weight: 700;
+  padding: 16px; border-radius: 50px; border: none; cursor: pointer;
+  transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: 4px; letter-spacing: 0.02em;
+}
+.form-submit:hover { background: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(42,157,143,0.3); }
+.form-note { text-align: center; font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 12px; }
+.booking-contact-row {
+  display: flex; flex-direction: column; gap: 10px; margin-top: 24px;
+}
+.contact-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(42,157,143,0.2);
+  border-radius: 12px; padding: 13px 16px; color: rgba(255,255,255,0.75);
+  font-size: 13.5px; font-weight: 500; transition: all 0.2s;
+}
+.contact-chip:hover { background: rgba(42,157,143,0.15); color: white; }
+.contact-chip svg { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.7; }
+.contact-chip .chip-label { font-size: 10px; color: rgba(255,255,255,0.35); margin-bottom: 1px; letter-spacing: 0.06em; text-transform: uppercase; }
+.contact-chip-inner { display: flex; flex-direction: column; }
+
+/* ── TESTIMONIALS ── */
+.testimonials { background: var(--cream); }
+.testi-scroll {
+  display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; scrollbar-width: none;
+  margin: 28px -24px 0; padding: 4px 24px 12px;
+}
+.testi-scroll::-webkit-scrollbar { display: none; }
+.testi-card {
+  flex: 0 0 300px; scroll-snap-align: start;
+  background: white; border: 1px solid var(--border); border-radius: 20px; padding: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+  box-shadow: 0 2px 12px rgba(26,122,110,0.05);
+}
+.testi-quote { font-size: 40px; font-family: var(--serif); color: var(--teal); line-height: 0.8; margin-bottom: -4px; }
+.testi-text {
+  font-family: var(--serif); font-size: 15px; font-style: italic;
+  color: var(--text); line-height: 1.7; flex: 1;
+}
+.testi-stars { color: #F4A017; font-size: 13px; letter-spacing: 2px; }
+.testi-author { display: flex; align-items: center; gap: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.testi-avatar {
+  width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+  background: var(--teal-pale); display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: var(--teal); border: 2px solid rgba(26,122,110,0.2);
+}
+.testi-name { font-size: 13.5px; font-weight: 700; color: var(--navy); }
+.testi-meta { font-size: 11px; color: var(--text-light); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); color: rgba(255,255,255,0.6);
+  padding: 40px 24px 28px;
+}
+.footer-top { display: flex; flex-direction: column; gap: 28px; }
+.footer-brand { }
+.footer-logo-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.footer-logo-icon {
+  width: 40px; height: 40px; background: var(--teal); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.footer-logo-icon svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 2.2; }
+.footer-brand-name { font-family: var(--serif); font-size: 17px; font-weight: 700; color: white; }
+.footer-brand-sub { font-size: 10px; color: var(--teal-light); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+.footer-desc { font-size: 13px; line-height: 1.75; color: rgba(255,255,255,0.45); }
+.footer-contact { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.footer-contact a {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.2s;
+}
+.footer-contact a:hover { color: var(--teal-light); }
+.footer-contact svg { width: 16px; height: 16px; flex-shrink: 0; }
+.footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.footer-col h4 { font-size: 12px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+.footer-col a { display: block; font-size: 12.5px; color: rgba(255,255,255,0.45); padding: 4px 0; transition: color 0.2s; }
+.footer-col a:hover { color: var(--teal-light); }
+.footer-hours .hour-row { display: flex; justify-content: space-between; font-size: 12px; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.hour-row .day { color: rgba(255,255,255,0.45); }
+.hour-row .time { color: rgba(255,255,255,0.7); font-weight: 600; }
+.footer-bottom {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+}
+.footer-social { display: flex; gap: 10px; }
+.social-btn {
+  width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+}
+.social-btn:hover { background: var(--teal); border-color: var(--teal); }
+.social-btn svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.6); }
+.social-btn:hover svg { fill: white; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+.footer-copy span { color: rgba(42,157,143,0.6); }
+
+/* ── FLOATING ── */
+.fab-group {
+  position: fixed; bottom: 24px; right: 18px; z-index: 400;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.fab {
+  width: 54px; height: 54px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: all 0.25s; border: none; cursor: pointer; text-decoration: none;
+}
+.fab:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+.fab-wa { background: #25D366; }
+.fab-call { background: var(--teal); }
+.fab svg { width: 24px; height: 24px; }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; top: 76px; left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: var(--teal); color: white;
+  padding: 13px 22px; border-radius: 50px;
+  font-size: 13px; font-weight: 600;
+  box-shadow: 0 6px 24px rgba(26,122,110,0.35);
+  opacity: 0; transition: all 0.4s ease;
+  z-index: 600; white-space: nowrap; pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (min-width: 480px) {
+  .hero-btns { flex-direction: row; }
+  .btn-teal, .btn-outline-white { flex: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-cross">
+    <svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg>
+  </div>
+  <div class="loader-text">Dr. Siddiqui Clinic</div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ Appointment confirmed — we'll call you shortly!</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Dr. Siddiqui</div>
+      <div class="nav-logo-sub">General Physician</div>
+    </div>
+  </a>
+  <div class="nav-actions">
+    <a href="tel:+919876543210" class="nav-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      +91-9876543210
+    </a>
+    <a href="#booking" class="nav-book">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-bg-circle-1"></div>
+  <div class="hero-bg-circle-2"></div>
+
+  <div class="hero-tag">
+    <div class="hero-tag-dot"></div>
+    Available This Week
+  </div>
+
+  <h1>Welcome to<br><em>Dr. Siddiqui's</em><br>Clinic</h1>
+  <p class="hero-location">📍 Vashi, Navi Mumbai</p>
+  <p class="hero-desc">Trusted general physician care in Vashi — treating the whole family with compassion, expertise, and personalised attention.</p>
+
+  <div class="hero-btns">
+    <a href="#about" class="btn-outline-white">Read More</a>
+    <a href="#booking" class="btn-teal">Book Appointment</a>
+  </div>
+
+  <div class="hero-call-box">
+    <div class="hero-call-icon">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+    </div>
+    <div>
+      <div class="hero-call-label">Call Us</div>
+      <a href="tel:+919876543210" class="hero-call-num">+91-9876543210</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about sec" id="about">
+  <div class="sec-label reveal">About Us</div>
+  <h2 class="sec-title reveal">Where Expertise<br>Meets <em>Compassion</em></h2>
+  <div class="sec-divider reveal"></div>
+
+  <div class="about-img-wrap reveal">
+    <div class="about-img-main">
+      <div class="about-img-placeholder">
+        <div class="about-img-placeholder-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="about-img-placeholder-text">Dr. Siddiqui, MBBS, MD</div>
+      </div>
+    </div>
+    <div class="about-exp-badge">
+      <div class="about-exp-num">12</div>
+      <div class="about-exp-label">Years of Experience</div>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <p class="sec-body reveal">At our practice, we are committed to providing exceptional care for the whole family. Led by <strong>Dr. Siddiqui</strong>, a trusted General Physician in Vashi with 12+ years of experience, our clinic offers evidence-based medicine with a deeply personal touch. With expertise in chronic disease management, preventive health, and paediatric care, every patient receives a treatment plan built around their unique needs.</p>
+
+    <p class="sec-body reveal" style="margin-top:14px">For trusted general medical care in Navi Mumbai, contact Dr. Siddiqui Clinic. <a href="tel:+919876543210" style="color:var(--teal);font-weight:600">+91-9876543210</a></p>
+
+    <div class="about-highlights">
+      <div class="about-highlight reveal">
+        <div class="hl-icon">🎓</div>
+        <div class="hl-text"><h4>MBBS, MD — Internal Medicine</h4><p>AIIMS Delhi (Gold Medallist, 2010) · KEM Hospital, Mumbai</p></div>
+      </div>
+      <div class="about-highlight reveal">
+        <div class="hl-icon">🏆</div>
+        <div class="hl-text"><h4>IMA Member &amp; Published Researcher</h4><p>3 peer-reviewed publications in preventive medicine</p></div>
+      </div>
+      <div class="about-highlight reveal">
+        <div class="hl-icon">💻</div>
+        <div class="hl-text"><h4>Telemedicine Available</h4><p>Secure video consultations for follow-ups and minor concerns</p></div>
+      </div>
+    </div>
+
+    <a href="#about" class="btn-teal-outline reveal">
+      Read More
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services sec" id="services">
+  <div class="sec-label reveal">Our</div>
+  <h2 class="sec-title reveal">Services</h2>
+  <div class="sec-divider reveal"></div>
+
+  <div class="services-grid">
+    <a href="#booking" class="service-card reveal">
+      <div class="svc-icon">🩺</div>
+      <div class="svc-body"><h3>General Consultations</h3><p>Acute illness, fever, infections — same-day slots available</p></div>
+      <div class="svc-arrow">›</div>
+    </a>
+    <a href="#booking" class="service-card reveal">
+      <div class="svc-icon">❤️</div>
+      <div class="svc-body"><h3>Chronic Disease Management</h3><p>Diabetes, hypertension, thyroid — personalised long-term care</p></div>
+      <div class="svc-arrow">›</div>
+    </a>
+    <a href="#booking" class="service-card reveal">
+      <div class="svc-icon">🧬</div>
+      <div class="svc-body"><h3>Preventive Health Screenings</h3><p>Annual checkups, blood panels, ECG, wellness assessments</p></div>
+      <div class="svc-arrow">›</div>
+    </a>
+    <a href="#booking" class="service-card reveal">
+      <div class="svc-icon">👶</div>
+      <div class="svc-body"><h3>Paediatric Care</h3><p>Vaccinations, growth monitoring, childhood illness treatment</p></div>
+      <div class="svc-arrow">›</div>
+    </a>
+    <a href="#booking" class="service-card reveal">
+      <div class="svc-icon">🏠</div>
+      <div class="svc-body"><h3>Home Visits</h3><p>Available for elderly and mobility-restricted patients</p></div>
+      <div class="svc-arrow">›</div>
+    </a>
+    <a href="#booking" class="service-card reveal">
+      <div class="svc-icon">💻</div>
+      <div class="svc-body"><h3>Online Consultations</h3><p>Video calls for follow-ups, prescriptions, minor concerns</p></div>
+      <div class="svc-arrow">›</div>
+    </a>
+  </div>
+  <div class="view-all-wrap">
+    <a href="#services" class="btn-teal-ghost reveal">View All Services →</a>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements sec" id="achievements">
+  <div class="sec-label">Our</div>
+  <h2 class="sec-title reveal">Achievements</h2>
+  <div class="sec-divider reveal"></div>
+  <p class="sec-body reveal">Over the years, we have proudly served thousands of patients with exceptional care, combining experience, innovation, and compassion to deliver outstanding results.</p>
+
+  <div class="video-wrap reveal">
+    <iframe src="https://www.youtube.com/embed/4PkxY6tcZC8?si=HH0aOoax60CoxaU2" title="Clinic Introduction" allowfullscreen loading="lazy"></iframe>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card reveal">
+      <div class="stat-num">12<span class="stat-plus">+</span></div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-num">10<span class="stat-plus">+</span></div>
+      <div class="stat-label">Treatments Offered</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-num">98<span class="stat-plus">%</span></div>
+      <div class="stat-label">Effective Results</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-num">4K<span class="stat-plus">+</span></div>
+      <div class="stat-label">Happy Patients</div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="advantages sec" id="advantages">
+  <div class="sec-label reveal">Our</div>
+  <h2 class="sec-title reveal">Advantages</h2>
+  <div class="sec-divider reveal"></div>
+
+  <div class="adv-grid">
+    <div class="adv-card reveal">
+      <div class="adv-num">01</div>
+      <div class="adv-icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>Deliver exceptional healthcare through expertise, innovation, and personalised solutions — ensuring comfort, safety, and improved quality of life for every patient.</p>
+    </div>
+    <div class="adv-card reveal">
+      <div class="adv-num">02</div>
+      <div class="adv-icon">🔭</div>
+      <h3>Our Vision</h3>
+      <p>To be Navi Mumbai's most trusted family physician, restoring health and enhancing lives through compassionate, evidence-based, patient-centred treatments.</p>
+    </div>
+    <div class="adv-card reveal">
+      <div class="adv-num">03</div>
+      <div class="adv-icon">💎</div>
+      <h3>Our Values</h3>
+      <p>We uphold excellence, integrity, and innovation — fostering trust while providing holistic care with respect, empathy, and unwavering professional commitment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="doctors sec" id="doctors">
+  <div class="sec-label reveal">Our</div>
+  <h2 class="sec-title reveal">Doctor</h2>
+  <div class="sec-divider reveal"></div>
+
+  <div class="doctors-grid">
+    <div class="doctor-card reveal">
+      <div class="doctor-photo">
+        <div class="doctor-initials-circle">PM</div>
+        <div class="doctor-badge">General Physician</div>
+      </div>
+      <div class="doctor-info">
+        <h3>Dr. Siddiqui</h3>
+        <div class="doctor-quals">MBBS, MD — Internal Medicine</div>
+        <div class="doctor-spec">General Physician &amp; Family Medicine Specialist, Navi Mumbai</div>
+        <div class="doctor-tags">
+          <span class="doctor-tag">Preventive Care</span>
+          <span class="doctor-tag">Chronic Disease</span>
+          <span class="doctor-tag">Paediatrics</span>
+          <span class="doctor-tag">Telemedicine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking sec" id="booking">
+  <div class="sec-label">Book Appointment</div>
+  <h2 class="sec-title reveal">Looking for<br>Expert <em>Care?</em></h2>
+  <div class="sec-divider reveal"></div>
+  <p class="sec-body reveal">Book your appointment today and experience personalised care designed to restore your health, comfort, and confidence.</p>
+
+  <div class="booking-cta-box reveal">
+    <div class="booking-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="Rahul">
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Sharma">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-field">
+        <label>Consultation Type</label>
+        <select>
+          <option value="">Select…</option>
+          <option>In-clinic Visit</option>
+          <option>Video Consultation</option>
+          <option>Home Visit</option>
+          <option>Follow-up Appointment</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Preferred Date</label>
+          <input type="date">
+        </div>
+        <div class="form-field">
+          <label>Preferred Time</label>
+          <select>
+            <option value="">Time…</option>
+            <option>9:00 AM</option><option>10:00 AM</option>
+            <option>11:00 AM</option><option>12:00 PM</option>
+            <option>4:00 PM</option><option>5:00 PM</option>
+            <option>6:00 PM</option><option>7:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Reason for Visit</label>
+        <textarea placeholder="E.g. general checkup, fever, diabetes follow-up…"></textarea>
+      </div>
+      <button class="form-submit" onclick="handleBook()">
+        Confirm Appointment
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="form-note">🔒 Your information is confidential and never shared.</p>
+    </div>
+  </div>
+
+  <div class="booking-contact-row">
+    <a href="tel:+919876543210" class="contact-chip reveal">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      <div class="contact-chip-inner"><div class="chip-label">Call Us</div>+91-9876543210</div>
+    </a>
+    <a href="https://wa.me/919876543210" target="_blank" class="contact-chip reveal">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <div class="contact-chip-inner"><div class="chip-label">WhatsApp</div>Message Us</div>
+    </a>
+    <a href="mailto:drsiddiqui@gmail.com" class="contact-chip reveal">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <div class="contact-chip-inner"><div class="chip-label">Email</div>drsiddiqui@gmail.com</div>
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials sec" id="reviews">
+  <div class="sec-label reveal">Our</div>
+  <h2 class="sec-title reveal">Testimonials</h2>
+  <div class="sec-divider reveal"></div>
+
+  <div class="testi-scroll">
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Such a wonderful experience. Dr. Siddiqui actually listens and explains everything clearly. After years of feeling dismissed, I finally have a diagnosis and a plan that works for me.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-author">
+        <div class="testi-avatar">RS</div>
+        <div><div class="testi-name">Ritu Sharma</div><div class="testi-meta">Happy Patient</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Brought both my kids here — the clinic is calm and the doctor was absolutely wonderful with my 4-year-old. Appointments never feel rushed. Highly recommend.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-author">
+        <div class="testi-avatar">AK</div>
+        <div><div class="testi-name">Arun Kaur</div><div class="testi-meta">Google Review</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">I manage my diabetes so much better now. The quarterly review system she set up has genuinely changed my health — I can't thank her enough.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-author">
+        <div class="testi-avatar">MP</div>
+        <div><div class="testi-name">Mohan Pillai</div><div class="testi-meta">Happy Patient</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Booked a video call at 8pm on a weekday. She sent the prescription to my pharmacy within the hour. Absolutely incredible service and so convenient.</p>
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-author">
+        <div class="testi-avatar">SN</div>
+        <div><div class="testi-name">Simran Nair</div><div class="testi-meta">Google Review</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg>
+        </div>
+        <div>
+          <div class="footer-brand-name">Dr. Siddiqui</div>
+          <div class="footer-brand-sub">General Physician · Navi Mumbai</div>
+        </div>
+      </div>
+      <p class="footer-desc">Comprehensive general medical care with personalised treatments for the whole family — restoring health, comfort, and wellness in Vashi.</p>
+      <div class="footer-contact">
+        <a href="tel:+919876543210">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          +91-9876543210
+        </a>
+        <a href="mailto:drsiddiqui@gmail.com">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          drsiddiqui@gmail.com
+        </a>
+        <a href="#">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Sector 17, Vashi, Navi Mumbai – 400703
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctor</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#booking">Contact Us</a>
+        <a href="#booking">Book Appointment</a>
+      </div>
+      <div class="footer-col footer-hours">
+        <h4>Working Hours</h4>
+        <div class="hour-row"><span class="day">Mon – Fri</span><span class="time">9–1 PM</span></div>
+        <div class="hour-row"><span class="day">Mon – Fri</span><span class="time">4–8 PM</span></div>
+        <div class="hour-row"><span class="day">Saturday</span><span class="time">9–2 PM</span></div>
+        <div class="hour-row"><span class="day">Sunday</span><span class="time">Closed</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-social">
+      <a href="#" class="social-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="#" class="social-btn" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://wa.me/919876543210" target="_blank" class="social-btn" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">© 2025 Dr. Siddiqui Clinic. All Rights Reserved.<br>Website by <span>Northstar Web</span></p>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="fab-group">
+  <a href="https://wa.me/919876543210" target="_blank" class="fab fab-wa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="tel:+919876543210" class="fab fab-call" aria-label="Call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" width="22" height="22"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+  </a>
+</div>
+
+<script>
+// Loader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const l = document.getElementById('loader');
+    l.style.opacity = '0';
+    setTimeout(() => l.style.display = 'none', 500);
+  }, 900);
+});
+
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// Date min
+const di = document.querySelector('input[type="date"]');
+if (di) di.min = new Date().toISOString().split('T')[0];
+
+// Booking toast
+function handleBook() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
